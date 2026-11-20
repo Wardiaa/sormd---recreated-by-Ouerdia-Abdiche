@@ -1,0 +1,22 @@
+{
+  "name": "sormd-tizi-ouzou",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site de la Section Ordinale Régionale des Médecins-Dentistes de Tizi-Ouzou",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n API,WEB -c yellow,cyan \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "npm run dev -w backend",
+    "dev:web": "npm run dev -w frontend",
+    "build": "npm run build -w frontend && npm run build -w backend",
+    "start": "npm run start -w backend",
+    "preview": "npm run preview -w frontend",
+    "seed": "npm run seed -w backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.5"
+  }
+}
