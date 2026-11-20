@@ -47,38 +47,7 @@ export default function Association() {
               <p>Le bureau de l'ordre régional est composé d'un président, d'un vice-président, d'un secrétaire général, d'un trésorier et de deux assesseurs. Le bureau du mandat actuel est composé comme suit :</p>
             </div>
             <div className="team-grid-container mt-30">
-              <div className="team-grid">
-                <div className="team-member">
-                  <img src="img/president-default.png" alt="Président de la section" className="member-photo" />
-                  <h4>Président</h4>
-                  <p className="role">Bureau régional</p>
-                </div>
-                <div className="team-member">
-                  <img src="img/president-default.png" alt="Vice-président de la section" className="member-photo" />
-                  <h4>Vice-président</h4>
-                  <p className="role">Bureau régional</p>
-                </div>
-                <div className="team-member">
-                  <img src="img/president-default.png" alt="Secrétaire général" className="member-photo" />
-                  <h4>Secrétaire général</h4>
-                  <p className="role">Bureau régional</p>
-                </div>
-                <div className="team-member">
-                  <img src="img/president-default.png" alt="Trésorier" className="member-photo" />
-                  <h4>Trésorier</h4>
-                  <p className="role">Bureau régional</p>
-                </div>
-                <div className="team-member">
-                  <img src="img/president-default.png" alt="Assesseur" className="member-photo" />
-                  <h4>Assesseur</h4>
-                  <p className="role">Bureau régional</p>
-                </div>
-                <div className="team-member">
-                  <img src="img/president-default.png" alt="Assesseur" className="member-photo" />
-                  <h4>Assesseur</h4>
-                  <p className="role">Bureau régional</p>
-                </div>
-              </div>
+              <div className="team-grid"></div>
             </div>
           </div>
         </section>
@@ -88,28 +57,7 @@ export default function Association() {
             <p className="governance-description text-center mb-5">
               La section ordinale régionale est composée de plusieurs commissions qui travaillent sur des axes stratégiques.
             </p>
-            <div className="commission-list-grid mt-30">
-              <div className="commission-card">
-                <h4>Commission de déontologie</h4>
-                <p>Veille au respect du code de déontologie et accompagne les praticiens dans leurs obligations professionnelles.</p>
-              </div>
-              <div className="commission-card">
-                <h4>Commission de formation</h4>
-                <p>Organise les formations continues, les ateliers et les rencontres scientifiques de la section régionale.</p>
-              </div>
-              <div className="commission-card">
-                <h4>Commission des relations avec les patients</h4>
-                <p>Traite les doléances et participe aux procédures de conciliation entre patients et praticiens.</p>
-              </div>
-              <div className="commission-card">
-                <h4>Commission du numerus clausus</h4>
-                <p>Étudie les questions liées à l'installation des cabinets et à la démographie des professionnels.</p>
-              </div>
-              <div className="commission-card">
-                <h4>Commission de communication</h4>
-                <p>Assure l'information des adhérents et la présence numérique de la section ordinale.</p>
-              </div>
-            </div>
+            <div className="commission-list-grid mt-30"></div>
           </div>
         </section>
         <section className="stats-section" style={{backgroundColor: 'var(--color-background)'}}>
@@ -122,7 +70,7 @@ export default function Association() {
                 <span className="stat-label">Wilayas Couvertes</span>
               </div>
               <div className="stat-item">
-                <span className="stat-number">6</span>
+                <span className="stat-number">0</span>
                 <span className="stat-label">Membres Élus de la Section</span>
               </div>
               <div className="stat-item">
