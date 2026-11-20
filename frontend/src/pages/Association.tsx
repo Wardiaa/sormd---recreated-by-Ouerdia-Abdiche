@@ -140,9 +140,9 @@ export default function Association() {
           <div className="container">
             <h2 style={{color: 'white', fontSize: '1.8em', marginBottom: 15, fontWeight: 700}}>Vous êtes Médecin-Dentiste dans la Région ?</h2>
             <p style={{color: 'white', fontSize: '1.1em', marginBottom: 25, maxWidth: 800, marginLeft: 'auto', marginRight: 'auto'}}>Faites partie de notre communauté professionnelle et bénéficiez de tous nos services.</p>
-            <Lien href="https://www.assoclic.com/sormdto/FR/page-inscription.php" style={{background: 'linear-gradient(135deg, #8B4789 0%, #6d2077 100%)', color: 'white', border: 'none', padding: '15px 35px', fontSize: '1.1em', fontWeight: 600, borderRadius: 50, boxShadow: '0 6px 15px rgba(139, 71, 137, 0.4)', transition: 'all 0.3s ease', display: 'inline-block', textDecoration: 'none'}}>
+            <button type="button" style={{background: 'linear-gradient(135deg, #8B4789 0%, #6d2077 100%)', color: 'white', border: 'none', padding: '15px 35px', fontSize: '1.1em', fontWeight: 600, borderRadius: 50, boxShadow: '0 6px 15px rgba(139, 71, 137, 0.4)', transition: 'all 0.3s ease', display: 'inline-block', textDecoration: 'none'}}>
               <i className="fas fa-user-plus" /> Adhérer à l'Ordre
-            </Lien>
+            </button>
           </div>
         </section>
       </main>

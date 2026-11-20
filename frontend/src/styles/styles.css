@@ -238,6 +238,8 @@ header {
     cursor: pointer;
     margin: 10px;
     text-decoration: none;
+    font-family: inherit;
+    line-height: inherit;
 }
 
 .btn.primary {

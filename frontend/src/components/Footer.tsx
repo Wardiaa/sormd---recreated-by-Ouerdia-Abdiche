@@ -53,9 +53,7 @@ export default function Footer() {
         réservés.{' '}
         <span className="separator">|</span>
         {' '}
-        <a className="link-admin" href="https://www.assoclic.com/sormdto/FR/page-admin.php">
-          Administration
-        </a>
+        <a className="link-admin">Administration</a>
       </p>
     </footer>
   );

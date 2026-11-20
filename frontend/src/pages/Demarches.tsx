@@ -23,9 +23,9 @@ export default function Demarches() {
               </div>
               <h3>S'inscrire à l'Ordre</h3>
               <p>La première étape indispensable pour pouvoir exercer la profession en toute légalité.</p>
-              <Lien href="https://www.assoclic.com/sormdto/FR/page-connexion.php" className="btn btn-login btn-sm mt-30" target="_blank" rel="noopener">
+              <button type="button" className="btn btn-login btn-sm mt-30">
                 Consulter le Dossier
-              </Lien>
+              </button>
             </div>
             <div className="card patient-action-card rounded-corners" style={{boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)'}}>
               <div className="card-image-mission" style={{backgroundColor: '#e8eaf6'}}>
@@ -78,9 +78,9 @@ export default function Demarches() {
                 <Lien href="docs/dossier-inscription.pdf" target="_blank" className="btn primary">
                   <i className="fas fa-download" /> Dossier d'inscription
                 </Lien>{' '}
-                <Lien href="https://www.assoclic.com/sormdto/FR/page-inscription.php" className="btn secondary">
+                <button type="button" className="btn secondary">
                   <i className="fas fa-id-card-alt" /> Je m'inscris à l'ordre
-                </Lien>
+                </button>
               </div>
             </div>
             <div className="image-block">

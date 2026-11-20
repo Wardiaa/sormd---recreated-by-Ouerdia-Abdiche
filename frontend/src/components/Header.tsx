@@ -154,34 +154,22 @@ export default function Header() {
         </ul>
 
         <div className="mobile-actions">
-          <a
-            href="https://www.assoclic.com/sormdto/FR/page-inscription.php"
-            className="btn btn-signup"
-          >
+          <button type="button" className="btn btn-signup">
             S'inscrire
-          </a>
-          <a
-            href="https://www.assoclic.com/sormdto/FR/page-connexion.php"
-            className="btn btn-login"
-          >
+          </button>
+          <button type="button" className="btn btn-login">
             Mon compte
-          </a>
+          </button>
         </div>
       </nav>
 
       <div className="header-actions">
-        <a
-          href="https://www.assoclic.com/sormdto/FR/page-inscription.php"
-          className="btn btn-signup"
-        >
+        <button type="button" className="btn btn-signup">
           S'inscrire
-        </a>
-        <a
-          href="https://www.assoclic.com/sormdto/FR/page-connexion.php"
-          className="btn btn-login"
-        >
+        </button>
+        <button type="button" className="btn btn-login">
           Mon compte
-        </a>
+        </button>
       </div>
     </header>
   );

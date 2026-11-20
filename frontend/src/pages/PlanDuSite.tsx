@@ -31,8 +31,8 @@ export default function PlanDuSite() {
                   <li><Lien href="/documents">Documents</Lien></li>
                   <li><Lien href="/actualites">Actualités</Lien></li>
                   <li><Lien href="/evenements">Événements</Lien></li>
-                  <li><Lien href="https://www.assoclic.com/sormdto/FR/page-inscription.php">Inscription à l'Ordre</Lien></li>
-                  <li><Lien href="https://www.assoclic.com/sormdto/FR/page-connexion.php">Accès à mon espace</Lien></li>
+                  <li><a>Inscription à l'Ordre</a></li>
+                  <li><a>Accès à mon espace</a></li>
                   <li><Lien href="/contact">Nous contacter</Lien></li>
                 </ul>
               </div>
@@ -53,7 +53,7 @@ export default function PlanDuSite() {
                   <li><Lien href="/politique-confidentialite">Politique de confidentialité</Lien></li>
                   <li><Lien href="/plan-du-site">Plan du Site</Lien></li>
                   <li><Lien href="/telecharger-app">Application mobile</Lien></li>
-                  <li><Lien href="https://www.assoclic.com/sormdto/FR/page-admin.php">Administration</Lien></li>
+                  <li><a>Administration</a></li>
                 </ul>
               </div>
             </div>

@@ -1,17 +1,8 @@
-import { useState } from 'react';
+import useCookieConsent from '../hooks/useCookieConsent';
 import Lien from './Lien';
-import { ecrireCookie, lireCookie } from './cookies';
-
-const NOM_COOKIE = 'user_cookie_consent';
-const DUREE_JOURS = 365;
 
 export default function CookieBanner() {
-  const [visible, setVisible] = useState(() => lireCookie(NOM_COOKIE) === null);
-
-  function enregistrer(choix: 'accepted' | 'declined') {
-    ecrireCookie(NOM_COOKIE, choix, DUREE_JOURS);
-    setVisible(false);
-  }
+  const { visible, enregistrer } = useCookieConsent();
 
   return (
     <div

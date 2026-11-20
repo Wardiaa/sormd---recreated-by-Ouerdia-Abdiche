@@ -26,13 +26,13 @@ export default function Accueil() {
             <Lien href="/annuaire" className="btn primary">
               Trouver un Dentiste
             </Lien>
-            <Lien
-              href="https://www.assoclic.com/sormdto/FR/page-inscription.php"
+            <button
+              type="button"
               className="btn primary"
               style={{ backgroundColor: '#c595cb', borderColor: '#c595cb' }}
             >
               Adhésion &amp; Accès
-            </Lien>
+            </button>
           </div>
         </HeroBanner>
 
