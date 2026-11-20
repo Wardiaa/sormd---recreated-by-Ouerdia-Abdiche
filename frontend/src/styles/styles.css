@@ -1281,6 +1281,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 10001;
 }
 
 .image-viewer-close:hover {
