@@ -39,7 +39,7 @@ export function rechercherPraticiens(
        FROM praticiens
        ORDER BY nom ASC, prenom ASC`
     )
-    .all() as PraticienRow[];
+    .all() as unknown as PraticienRow[];
 
   const termeNom = normaliser(nom);
 

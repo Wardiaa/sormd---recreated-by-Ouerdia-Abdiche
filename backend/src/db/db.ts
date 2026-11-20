@@ -1,6 +1,6 @@
-import Database from 'better-sqlite3';
 import fs from 'node:fs';
 import path from 'node:path';
+import { DatabaseSync } from 'node:sqlite';
 import { fileURLToPath } from 'node:url';
 import { evenementsSeed, praticiensSeed } from './seed-data.js';
 
@@ -10,10 +10,10 @@ const repertoireDonnees = path.resolve(repertoireCourant, '../../data');
 fs.mkdirSync(repertoireDonnees, { recursive: true });
 
 const cheminBase = path.join(repertoireDonnees, 'sormd.db');
-export const db = new Database(cheminBase);
+export const db = new DatabaseSync(cheminBase);
 
-db.pragma('journal_mode = WAL');
-db.pragma('foreign_keys = ON');
+db.exec('PRAGMA journal_mode = WAL;');
+db.exec('PRAGMA foreign_keys = ON;');
 
 db.exec(`
   CREATE TABLE IF NOT EXISTS messages_contact (
@@ -78,11 +78,11 @@ db.exec(`
 `);
 
 export function semerDonnees(): void {
-  const nombrePraticiens = db.prepare('SELECT COUNT(*) AS total FROM praticiens').get() as {
-    total: number;
-  };
+  const nombrePraticiens = db.prepare('SELECT COUNT(*) AS total FROM praticiens').get() as
+    | { total: number }
+    | undefined;
 
-  if (nombrePraticiens.total === 0) {
+  if (!nombrePraticiens || nombrePraticiens.total === 0) {
     const insererPraticien = db.prepare(`
       INSERT INTO praticiens (
         civilite, nom, prenom, num_ordre, specialite, wilaya_code, wilaya,
@@ -90,7 +90,8 @@ export function semerDonnees(): void {
       ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `);
 
-    const insererTous = db.transaction(() => {
+    db.exec('BEGIN');
+    try {
       for (const praticien of praticiensSeed) {
         insererPraticien.run(
           praticien.civilite,
@@ -107,9 +108,11 @@ export function semerDonnees(): void {
           praticien.cabinet
         );
       }
-    });
-
-    insererTous();
+      db.exec('COMMIT');
+    } catch (erreur) {
+      db.exec('ROLLBACK');
+      throw erreur;
+    }
   }
 
   const insererEvenement = db.prepare(`

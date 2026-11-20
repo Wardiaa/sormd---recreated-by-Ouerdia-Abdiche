@@ -18,5 +18,5 @@ export function obtenirListeActualites(): Actualite[] {
        FROM actualites
        ORDER BY date_publication DESC, id DESC`
     )
-    .all() as Actualite[];
+    .all() as unknown as Actualite[];
 }

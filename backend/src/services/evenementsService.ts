@@ -23,5 +23,5 @@ export function obtenirListeEvenements(): Evenement[] {
        FROM evenements
        ORDER BY CASE WHEN date_debut IS NULL THEN 1 ELSE 0 END ASC, date_debut ASC`
     )
-    .all() as Evenement[];
+    .all() as unknown as Evenement[];
 }
